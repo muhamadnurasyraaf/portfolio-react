@@ -1,8 +1,8 @@
 import React from 'react'
-import styles from './css/About.module.css'
+
 const about = () => {
   return (
-    <div className={ styles['head']}>
+    <div className='h-screen bg-body text-txt'>
         <p>Here is about page</p>
     </div>
   )
