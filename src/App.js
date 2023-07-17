@@ -1,23 +1,29 @@
 import './App.css';
 import { BrowserRouter as Router, Routes , Route } from "react-router-dom";
-import Home from "./pages/Home";
-import NotFound from './pages/NotFound';
-import About from './pages/About';
+import { Home , About , NotFound , Contact , Projects } from './pages';
 import { Navbar } from './Components';
-
+import { AppProvider } from './AppContext';
 
 function App() {
+
+
   return (
     <div className="App">
-      <Router>
-        <Navbar />
+      <AppProvider>
+        <Router>
+          <Navbar />
         <Routes>
-          <Route path='/' element={<Home />}/>
-          <Route path='/about' element={<About />}/>
-          <Route path='*' element={<NotFound />}/>
-        </Routes>
-      </Router>
+            <Route path='/' element={<Home />}/>
+            <Route path='/about' element={<About />}/>
+            <Route path='/contact' element={<Contact />}/>
+            <Route path='/projects' element={<Projects />} />
+            <Route path='*' element={<NotFound />}/>
+          </Routes>
+        </Router>
+      </AppProvider>
     </div>
+   
+      
   );
 }
 
