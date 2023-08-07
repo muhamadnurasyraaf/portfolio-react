@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes , Route } from "react-router-dom";
 import { Home , About , NotFound , Contact , Projects } from './pages';
-import { Navbar } from './Components';
+import { Footer, Navbar } from './Components';
 import { AppProvider } from './AppContext';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
             <Route path='/contact' element={<Contact />}/>
             <Route path='/projects' element={<Projects />} />
             <Route path='*' element={<NotFound />}/>
-          </Routes>
+        </Routes>
         </Router>
       </AppProvider>
     </div>
